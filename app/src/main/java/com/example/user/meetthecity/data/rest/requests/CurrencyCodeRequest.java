@@ -1,6 +1,5 @@
 package com.example.user.meetthecity.data.rest.requests;
 
-import com.example.shaharwienrib.retrofit.data.model.GetCurrencyCodeResponse;
 import com.example.user.meetthecity.data.responses.GetCurrencyCodeResponse;
 
 import java.util.List;

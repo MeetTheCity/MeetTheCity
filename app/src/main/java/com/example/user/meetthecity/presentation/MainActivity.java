@@ -6,11 +6,13 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.user.meetthecity.R;
+import com.example.user.meetthecity.data.City;
 import com.example.user.meetthecity.data.responses.GetConvertedCurrencyResponse;
 import com.example.user.meetthecity.data.responses.GetCurrencyCodeResponse;
 import com.example.user.meetthecity.data.rest.RetrofitClient;
 import com.example.user.meetthecity.data.rest.requests.CurrencyCodeRequest;
 import com.example.user.meetthecity.data.rest.requests.CurrencyRequest;
+import com.example.user.meetthecity.util.FileProcessingUtils;
 
 import java.util.List;
 
@@ -30,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FileProcessingUtils fileProcessingUtils = new FileProcessingUtils(this);
+        fileProcessingUtils.parseCitiesCSV();
+
 
 
         getCurrencyCodeRequest = RetrofitClient.getClient(CurrencyCodeRequest.BASE_URL).create(CurrencyCodeRequest.class);

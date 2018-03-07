@@ -35,4 +35,14 @@ dependencies {
 
     // recyclerview
     compile 'com.android.support:recyclerview-v7:26.1.0'
+
+    // Room (use 1.1.0-alpha3 for latest alpha)
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+
+    //Timber - This is a logger with a small, extensible API which provides utility on top of Android's normal Log class.
+    implementation 'com.jakewharton.timber:timber:4.6.1'
+
+    compile 'com.opencsv:opencsv:4.1'
+
 }
